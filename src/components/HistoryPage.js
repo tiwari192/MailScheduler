@@ -1,7 +1,6 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
 
-const Home = () => {
+const HistoryPage = () => {
     return (
         <>
             <div className="home-page">
@@ -56,4 +55,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default HistoryPage

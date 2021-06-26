@@ -34,6 +34,7 @@ const Signup = () => {
 
     return (
         
+        <div className="main-page">
             <div className='form-container'>
             <div className='form-content-right'>
                 <form method="" className='form'>
@@ -103,7 +104,7 @@ const Signup = () => {
                 </form>
             </div>
         </div>
-        
+        </div>
     )
 }
 

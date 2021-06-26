@@ -24,7 +24,9 @@ const Login = () => {
     }
 
     return (
-        <div className='form-container'>
+
+        <div className="main-page">
+            <div className='form-container'>
             <div className='form-content-right'>
                 <form className='form'>
                     <h1>
@@ -66,6 +68,7 @@ const Login = () => {
                     </span>
                 </form>
             </div>
+        </div>
         </div>
     )
 }
