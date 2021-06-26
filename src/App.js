@@ -6,6 +6,7 @@ import Login from './components/Login'
 import 'bootstrap/dist/css/bootstrap.css'
 import Home from './components/Home'
 import  History  from './components/HistoryPage'
+import  Create  from './components/CreatePage'
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
 
       <Route path="/history">
         <History />
+      </Route>
+
+      <Route path="/create">
+        <Create />
       </Route>
 
     </>
