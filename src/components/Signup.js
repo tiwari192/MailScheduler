@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import Login from './Login'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useHistory} from 'react-router-dom'
 import '../css/Form.css'
 
 
 const Signup = () => {
+
+    const history = useHistory();
 
     const [registerData, setRegisterData] = useState({
         username: '',
@@ -24,11 +26,30 @@ const Signup = () => {
     }
 
     //To Do: for sending data to node server
-    const postData =  (e) =>{
+    const postData =  async (e) =>{
 
         e.preventDefault();
-        console.log(e.target.email);
-        //const response = await fetch('')
+        //console.log(e.target.email);
+        const {username, email, password, password2} = registerData;
+        const response = await fetch('/register',{
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username, email, password, password2
+            })
+        });
+
+        const data = await response.json();
+        if(data.status === 404 || !data){
+            window.alert("Invalid Registration");
+
+        }
+        else{
+            window.alert("Registration Success");
+            history.push('/login');
+        }
 
     }
 
