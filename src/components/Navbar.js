@@ -21,9 +21,7 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto">
 
-                            <li className="nav-item mx-3">
-                                <NavLink className="nav-link active btn btn-danger p-2" to="/login">Login</NavLink>
-                            </li>
+                           
 
                         </ul>
                     </div>
